@@ -1,0 +1,24 @@
+:root {
+  --annapurna-purple: rgba(92, 67, 133, 1);
+  --annapurna-purple-light: rgba(55, 0, 111, 1);
+  --annapurna-purple-bold: rgba(45, 0, 91, 1);
+  --annapurna-orange: rgba(233, 114, 26, 1);
+  --annapurna-orange-bold: rgba(206, 89, 0, 1);
+  --annapurna-green: rgba(94, 189, 43, 1);
+  --white: rgba(255, 255, 255, 1);
+  --off-white-dark: rgba(184, 184, 184, 1);
+  --off-white: rgba(249, 249, 249, 1);
+  --black: rgb(63, 63, 63);
+  --black-light: rgba(54, 54, 54, 1);
+  --black-shadow: rgba(103, 103, 103, 0.28);
+  --black-transparent: rgba(30, 30, 30, 0.5);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans";
+}
