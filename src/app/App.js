@@ -2,9 +2,14 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import Navbar from "../components/navbar/Navbar";
 import LoadingScreen from "../components/loding.screen/LoadingScreen";
+import { ThemeProvider } from "styled-components";
+import constants from "../utils/constants";
+import NavbarMobile from "../components/navbar.mobile/NavbarMobile";
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(() => (true));
+  const [isLoading, setIsLoading] = useState(() => (false));
+
+  const [darkTheme, setDarkTheme] = useState(() => (!true));
 
   useEffect(() => {
     setTimeout(() => {
@@ -17,9 +22,12 @@ const App = () => {
       <LoadingScreen />
     )
     : (
-      <BrowserRouter>
-        <Navbar />
-      </BrowserRouter>
+      <ThemeProvider theme={darkTheme ? constants.darkTheme : constants.lightTheme}>
+        <BrowserRouter>
+          <Navbar />
+          {/* <NavbarMobile /> */}
+        </BrowserRouter>
+      </ThemeProvider>
     )
 };
 

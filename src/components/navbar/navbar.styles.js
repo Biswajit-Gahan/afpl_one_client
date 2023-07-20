@@ -3,20 +3,22 @@ import constants from "../../utils/constants";
 import { navbarResponsive } from "./navbar.responsive";
 
 export const Container = styled.nav`
-  min-height: 90px;
-  max-height: 90px;
+  min-height: 80px;
+  max-height: 80px;
   min-width: 100vw;
   max-width: 100vw;
   display: flex;
   align-items: center;
   ${constants.boxShadow}
   padding: 0 150px;
+  background-color: var(--off-white);
 
   .main-wrapper {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
   }
 
   .brand-logo-container {
@@ -37,7 +39,7 @@ export const Container = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 30px;
   }
 
   li {
@@ -46,7 +48,7 @@ export const Container = styled.nav`
 
   .navbar-list {
     display: flex;
-    gap: 20px;
+    gap: 30px;
   }
 
   a {
@@ -121,7 +123,7 @@ export const Container = styled.nav`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--off-white);
+    background-color: var(--white);
     ${constants.boxShadow}
     border-radius: 5px;
     transform: translateY(10%);

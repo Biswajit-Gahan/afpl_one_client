@@ -7,7 +7,7 @@
   --annapurna-green: rgba(94, 189, 43, 1);
   --white: rgba(255, 255, 255, 1);
   --off-white-dark: rgba(184, 184, 184, 1);
-  --off-white: rgba(249, 249, 249, 1);
+  --off-white: rgba(rgba(247, 247, 247, 1));
   --black: rgb(63, 63, 63);
   --black-light: rgba(54, 54, 54, 1);
   --black-shadow: rgba(103, 103, 103, 0.28);
@@ -21,6 +21,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat Variable', sans-serif;
+}
+
+body {
+  background-color: var(--off-white);
 }
 
 ;
