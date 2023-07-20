@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import constants from "../../utils/constants";
+import { navbarResponsive } from "./navbar.responsive";
 
 export const Container = styled.nav`
   min-height: 90px;
@@ -55,17 +56,18 @@ export const Container = styled.nav`
 
   .navbar-item {
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
     position: relative;
 
     &::after {
       content: "";
       position: absolute;
-      left: -15px;
+      left: -10px;
       bottom: -5px;
       width: 100%;
       height: 2px;
       background-color: var(--annapurna-orange);
+      border-radius: 5px;
       transition: left 0.3s ease-in-out;
       visibility: hidden;
     }
@@ -102,7 +104,7 @@ export const Container = styled.nav`
 
   .current-language {
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--black);
   }
 
@@ -136,8 +138,9 @@ export const Container = styled.nav`
     max-width: 80px;
     min-height: 40px;
     font-size: small;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--black);
+    transition: background-color 0.3s ease-in-out, color 0.2s ease-in;
 
     &:hover {
       background-color: var(--annapurna-orange);
@@ -157,7 +160,7 @@ export const Container = styled.nav`
     );
     border: none;
     border-radius: 3px;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--white);
     transition: transform 0.1s ease-in-out;
 
@@ -170,5 +173,14 @@ export const Container = styled.nav`
     display: none;
   }
 
-  
+  /* RESPONSIVE MOBILE */
+  @media (max-width: ${constants.responsive.mobile}) {
+    ${navbarResponsive.mobile}
+  }
+
+  /* RESPONSIVE TABLET */
+  @media (max-width: ${constants.responsive.tablet}) {
+    ${navbarResponsive.tablet}
+  }
+
 `;

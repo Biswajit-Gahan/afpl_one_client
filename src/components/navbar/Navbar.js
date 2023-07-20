@@ -6,7 +6,7 @@ import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import LanguageIcon from '@mui/icons-material/Language';
 // ASSETS
 import brandLogoImage from "../../assets/images/afpl-one-logo-colored.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -17,9 +17,11 @@ const Navbar = () => {
       {/* MAIN WRAPPER */}
       <div className="main-wrapper">
         {/* BRAND LOGO CONTAINER */}
-        <div className="brand-logo-container">
-          <img src={brandLogoImage} alt="brand-logo-img" className="brand-logo-img" />
-        </div>
+        <Link>
+          <div className="brand-logo-container">
+            <img src={brandLogoImage} alt="brand-logo-img" className="brand-logo-img" draggable={false} />
+          </div>
+        </Link>
 
         {/* NAVBAR CONTAINER */}
         <div className="navbar-container">
@@ -47,13 +49,16 @@ const Navbar = () => {
             {/* LANGUAGE LIST CONTAINER */}
             <div className="language-list-container">
               <LanguageIcon className="nav-icon" />
-              <span className="current-language">En</span>
+              <span className="current-language">English</span>
               {/* LANGUAGE LIST WRAPPER */}
               <div className="language-list-wrapper">
                 {/* LANGUAGE LIST */}
                 <ul className="language-list">
+                  <li className="language-item">ଓଡ଼ିଆ</li>
+                  <li className="language-item">हिंदी</li>
                   <li className="language-item">English</li>
-                  <li className="language-item">Hindi</li>
+                  <li className="language-item">বাংলা</li>
+                  <li className="language-item">ಕನ್ನಡ</li>
                 </ul>
               </div>
             </div>
